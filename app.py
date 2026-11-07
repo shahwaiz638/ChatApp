@@ -136,12 +136,12 @@ def send(c):
         
 def StartRecieving():
     if(registered):
-        Recieve = threading.Thread(target= recieve, args= (c,) )
+        Recieve = threading.Thread(target= receive, args= (c,) )
         Recieve.start()
         
 
 
-def recieve(c):
+def receive(c):
     global text
     key_exchange = True
     while True:
